@@ -1,0 +1,111 @@
+<html>
+	
+	<nav class="navbar navbar-light bg-light">
+		<a class="navbar-brand" href="#">
+		  <img src="/assets/imagenes/logo.jpg" width="50" height="50" class="d-inline-block align-top" alt="">
+		  <aside>tienda C</aside>
+		  <div class="text-nowrap" style="width: 8rem;">
+			This text should overflow the parent.
+		  </div>
+
+		</a>
+	  </nav>
+	<head>
+		<title>Menu Desplegable</title>
+		<style type="text/css">
+			
+			* {
+				margin:0px;
+				padding:0px;
+			}
+			
+			#header {
+				margin:auto;
+				width:800px;
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			
+			ul, ol {
+				list-style:none;
+			}
+			
+			.nav {
+				width:800px; /*Le establecemos un ancho*/
+				margin:0 auto; /*Centramos automaticamente*/
+			}
+
+			.nav > li {
+				float:left;
+			}
+			
+			.nav li a {
+				background-color:#fff;
+				color:#974dc9;
+				text-decoration:none;
+				padding:10px 12px;
+				display:block;
+			}
+			
+			.nav li a:hover {
+				background-color:#dcc8e6;
+			}
+			
+			.nav li ul {
+				display:none;
+				position:absolute;
+				min-width:140px;
+			}
+			
+			.nav li:hover > ul {
+				display:block;
+			}
+			
+			.nav li ul li {
+				position:relative;
+			}
+			
+			.nav li ul li ul {
+				right:-140px;
+				top:0px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="header">
+			<nav> <!-- Aqui estamos iniciando la nueva etiqueta nav -->
+				<ul class="nav">
+
+					<li><a routerLink="/bienvenido">Inicio</a></li>
+          			<li><a routerLink="/inicio">Quienes somos</a></li>
+					<li><a routerLink="/producto">Producto</a>
+						<ul>
+							<li><a routerLink="./producto/tenis">tenis</a></li>
+							<li><a routerLink="./producto/tacones">tacones</a>
+								<ul>
+									<li><a  routerLink="./producto/tacones/taconalto"  >Tacón alto</a></li>
+									<li><a routerLink="./producto/tacones/taconmedio">Tacón medio</a></li>
+									<li><a routerLink="./producto/tacones/taconbajo">Tacón bajo</a></li>
+									<li><a routerLink="./producto/tacones/taconplataforma">Tacón plataforma</a></li>
+								</ul>
+							</li>
+
+							<li><a routerLink="./producto/suecos">Suecos</a></li>
+							<li><a routerLink="./producto/sandalias">Sandalias</a></li>
+						</ul>
+					</li>
+					<li><a routerLink="/contacto">Contacto</a></li>
+					<div class="d-flex">
+
+					<form class="d-flex">
+						<input class="form-control me-2" type="search" placeholder="Search " aria-label="Search">
+						<button class="btn btn-primary">Search</button>
+					  </form>
+					</div>
+				</ul>
+			</nav><!-- Aqui estamos cerrando la nueva etiqueta nav -->
+		</div>
+	</body>
+
+</html>
+
